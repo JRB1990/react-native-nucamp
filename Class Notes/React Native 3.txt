@@ -1,0 +1,16 @@
+Expo:
+Expo is a framework and a platform for universal React applications.
+
+Expo client
+Expo CLI
+Snack
+Expo SDK
+
+Expo SDK provides access to device and system functionality such as contacts, camera, and GPS location.
+
+Expo's Limitations:
+Not all iOS and Androids APIs are available yet.
+
+The SDK does not support all types of background code execution.
+
+If you need to keep your app size extremely lean, the managed workflow may not be the best choice.

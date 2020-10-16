@@ -1,0 +1,18 @@
+Mobile devices - and the internet itself - exists for us to share information with each other, and mobile devices have many ways to allow us to do that: email, text messaging, sharing information on social media, etc.
+
+Mailcomposer API to send emails, and React Native's own Share API to share to various apps.
+
+MailComposer.composeAsync(options)
+
+Returns a promise that resolves to an object with the status property 'sent', 'saved', or 'cancelled' for iOS. Android does not return this information and will always resolve to the status property 'sent'.
+
+React Native Share API:
+Share.share(content, options)
+
+Content object properties:
+-message
+-url
+-title
+(required to have message OR url, or both)
+
+options object contains miscellaneous config properties such as tintColor for iOS.

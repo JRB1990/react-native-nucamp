@@ -1,0 +1,15 @@
+Multiple types of storage available for mobile device: localStorage, AsyncStorage, Expo Secure Store, and more.
+
+Unencrypted key-value storage: React Native Async Storage API.
+
+Expo Secure Store API: encrypted key-value storage
+- meant to be used for small amounts of sensitive data.
+- uses iOS keychain services and Android SharedPreferences/Keystore system.
+
+The Expo Secure Store API exposes 3 methods:
+
+SecureStore.setItemAsync(key, value, options) - returns a promise that will reject if value cannot be stored on the device
+
+SecureStore.getItemAsync(key, options) - returns a promise that will resolve to stored value, or resolve to null if no entry for given key, or reject if error occured
+
+SecureStore.deleteItemAsync(key, options) - returns a promise that will reject if the value could not be deleted

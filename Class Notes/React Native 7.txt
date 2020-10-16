@@ -1,0 +1,31 @@
+Mobile devices today are typically equipped with a camera, as well as an image gallery app for images saved to the device.
+
+The camera can be used for more than taking photos, ex. scanning a barcode or QR code.
+
+Expo SDK offers several APIs to access the camera as well as access and manipulate saved images.
+
+Expo imagepicker API:
+Provides access to system UI to select image/video from the device's library, or take a new photo or video as your selection.
+
+ImagePicker.launchImageLibraryAsync(options)
+
+ImagePicker.launchCameraAsync(options)
+
+The launchCameraAsync method will return a promise.
+This promise is fulfilled when the user either takes a photo and confirms the choice, or cancels the photo taking operation.
+
+Resolved promise: If a photo was taken, returns object with media uri, width and height, media type, and more.
+
+If no photo was taken because the operation was cancelled, the resolve object will only have one property, a cancelled property set to true -- can check for this and respond appropriately.
+
+Expo ImageManipulator API:
+-use to alter an image
+-apply transforms: resize, rotate, flip, or crop
+-configure compression level, format (JPEG or PNG)
+-whether to include image data in Base64 format
+
+Expo Camera API:
+-provides a React component that renders a preview for the device's front or back camera.
+-you can adjust zoom, autofocus, white balance, flash mode
+-you can take photo, or start and stop video recording
+-detect faces, scan a barcode, and more

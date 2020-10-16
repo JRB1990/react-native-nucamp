@@ -1,0 +1,23 @@
+A mobile device will usually be conneccted to a network.
+
+Sometimes, the mobile device will lose connectivity, or be taken offline, or switch from one network type to another, such as from WiFi to Cellular or vice versa.
+
+It can be useful for a mobile app to know when a device's network connection changes, so it can deal with the network changes if necessary.
+
+An app might support switching to offline operation, and possibly handle synchronizing changes with a remote server when the device reconnects to a network.
+
+An app might also want access to information about a network connection for other reasons, such as pausing large data transfers if a device is not on WiFi.
+
+React Native Community's NetInfo Library:
+Originally a part of React Native, moved to a third party library maintained by the React native Community organization.
+
+You will install it with a scoped install, ex:
+yarn install @react-native-community/netinfo
+
+This lets you know that this is an official package maintained by this organization.
+
+NetInfo.fetch()
+- gets current state of the network, returns a promise that resolves to a NetInfoState object
+
+NetInfo.addEventListener(NetInfoState => {...})
+- subscribe to network changes, automatically gives you access to the NetInfoState object, returns a function that will unsubscribe this listener

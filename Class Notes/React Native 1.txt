@@ -1,0 +1,10 @@
+React Native Components:
+Built in UI components such as <View> and <Text>
+
+React Native maps these for us into corresponding native UI components for both Android and iOS.
+
+Many third party React Native libraries with components and tools we can use.
+
+A library for routing, a library for Redux with React Native, more.
+
+React Native elements library.

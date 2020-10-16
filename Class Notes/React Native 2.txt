@@ -1,0 +1,15 @@
+React Native Forms:
+No direct equivalent to the HTML <form> element
+
+In React, you still had to use components (such as Form and LocalForm) that would render to the HTML <form> elements in the browser DOM - this is not necessary in React Native.
+
+You will still use components that act similarly to HTML elements that take input from the user:
+
+Choose Yes/No, True/False, On/Off etc:
+HTML: Radio Buttons - React Native: Switch component.
+
+Choose multiple options:
+HTML: <option> and <select> - React Native: Picker and Picker.Item
+
+Enter Text:
+HTML: <input> - React Native: TextInput

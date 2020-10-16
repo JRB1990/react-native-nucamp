@@ -1,0 +1,28 @@
+Notifications are a common way of drawing attention by adding an icon to the notification bar and a message to the notification drawer.
+
+Local Notifications are generated from the client side;
+Push Notifications are generated from the server side;
+(but still use the same mechanism to display the notification on the client side)
+
+The Expo Notifications API provides access to both push (remote) notifications and local notifications.
+
+Local Notifications can be sent immediately, or at a scheduled time, either once or on a recurring basis.
+
+Example use case:
+An application that sends a notification to a user at a specific, reccuring time, such as a reminder to exercise every morning.
+
+Or a calendar-based app that sends an event reminder, or a notification about something happening in the app.
+
+Expo Notifications API:
+Notifications.presentLocalNotificationAsync(localNotification) - trigger a local notification immediately.
+
+Notifications.scheduleLocalNotificationAsync(localNotification, schedulingOptions) - schedule a local notification to fire at some specific time in the future or at a given interval.
+
+Notification.dismissNotificationAsync(localNotificationId) - dismisses the notification with the given id (Android only)
+
+There are several other methods available from the Notifications API, for generating push notifications, canceling a scheduled notification, etc.
+
+The localNotification object has two required string properties: title and body.
+Four optional properties: data, categoryId, iOS, Android.
+
+We will need to request permission to generate notifications from the underlying operating system using the Expo Permissions API.
